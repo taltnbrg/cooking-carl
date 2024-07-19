@@ -9,6 +9,7 @@ export default defineConfig({
       scss: {
         quietDeps: true,
       }
-    }
-  }
+    },
+    devSourcemap: true,
+  },
 })

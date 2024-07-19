@@ -1,5 +1,4 @@
 import ListGroup from 'react-bootstrap/ListGroup';
-// import Button from "react-bootstrap/Button";
 import { CloseButton } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import autoAnimate from '@formkit/auto-animate';
