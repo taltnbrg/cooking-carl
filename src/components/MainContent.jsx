@@ -22,7 +22,7 @@ const MainContent = ({
   return (
     <Container className="p-3 mt-3 contentspace">
       <div className="">
-        <Carousel crossfade indicators={false} interval={null} controls={false} activeIndex={indices[content]}>
+        <Carousel indicators={false} interval={null} controls={false} activeIndex={indices[content]}>
           <Carousel.Item>
             <Home lang={lang} handleButton={handleButton} />
           </Carousel.Item>
