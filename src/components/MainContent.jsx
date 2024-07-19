@@ -3,6 +3,7 @@ import About from './About';
 import Assistant from './Assistant';
 import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import { Carousel } from 'react-bootstrap';
 
 const MainContent = ({
   content,
@@ -13,35 +14,32 @@ const MainContent = ({
   handleIngredientsInputBlur,
   handleButton,
 }) => {
-  const displayContent = (content) => {
-    let newContent = content;
-    switch (content) {
-      case 'home':
-        newContent = <Home lang={lang} handleButton={handleButton} />;
-        break;
-      case 'about':
-        newContent = <About lang={lang} />;
-        break;
-      case 'assistant':
-        newContent = (
-          <Assistant
-            lang={lang}
-            ingredients={ingredients}
-            handleIngredientDelete={handleIngredientDelete}
-            handleIngredientsInputKeyUp={handleIngredientsInputKeyUp}
-            handleIngredientsInputBlur={handleIngredientsInputBlur}
-          />
-        );
-        break;
-      default:
-        newContent = <Home lang={lang} handleButton={handleButton} />;
-        break;
-    }
-    return newContent;
+  const indices = {
+    home: 0,
+    assistant: 1,
+    about: 2,
   };
   return (
     <Container className="p-3 mt-3 contentspace">
-      <div className="">{displayContent(content)}</div>
+      <div className="">
+        <Carousel crossfade indicators={false} interval={null} controls={false} activeIndex={indices[content]}>
+          <Carousel.Item>
+            <Home lang={lang} handleButton={handleButton} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Assistant
+              lang={lang}
+              ingredients={ingredients}
+              handleIngredientDelete={handleIngredientDelete}
+              handleIngredientsInputKeyUp={handleIngredientsInputKeyUp}
+              handleIngredientsInputBlur={handleIngredientsInputBlur}
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <About lang={lang} />
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </Container>
   );
 };
