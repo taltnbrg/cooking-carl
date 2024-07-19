@@ -1,0 +1,148 @@
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/mixins';
+@import './variables.scss';
+@import './wave_styles.scss';
+
+
+#root {
+    height: 100vh;
+    // background-color: rgba($background, 0.1);
+    // background: rgba(map-get($map: $color-theme, $key: "background"), 0.1);
+    // background: linear-gradient(65deg, rgba($primary, 0.3) -30%, rgba($background, 0.5) 25%, rgba($secondary-dull, 0.2) 55%, rgba($secondary, 0.2) 90%);
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    // from {
+    //     transform: rotate(0deg);
+    // }
+    // to {
+    //     transform: rotate(360deg);
+    // }
+}
+
+.logo {
+    height: 8em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+    outline: none;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+body {
+    height: 100% !important;
+}
+
+.wave {
+    @include wave-style();
+}
+
+.read-the-docs {
+    color: #888;
+}
+
+
+.w-fit-content {
+    width: fit-content;
+}
+
+.custom-text-input-focus:focus,
+.custom-text-input-focus:focus-within {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5) inset;
+    border: var(--bs-border-width) var(--bs-border-color-translucent);
+
+    /* background-color: var(--tertiary); */
+}
+
+.glass {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cccenter-h-100-md {
+    height: 100% !important;
+    display: grid;
+    place-content: center;
+}
+
+.z-dropdown-menu {
+    z-index: 2;
+}
+
+nav.z-dropdown-menu {
+    z-index: 3;
+}
+
+.w-75-md {
+    width: 75% !important;
+}
+
+.input-group {
+    .form-control {
+        margin-bottom: .0rem !important;
+    }
+}
+
+.app-min-width {
+    min-height: 150px !important;
+    min-width: 400px !important
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@media screen and (min-width: map-get($breakpoints,"xl")) {
+    .contentspace {
+        max-width: 75% !important;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, "sm")) {
+    .input-group {
+        .form-control {
+            width: 100%;
+            margin-bottom: .25rem;
+        }
+
+        & {
+            flex-direction: column;
+        }
+    }
+
+    .w-75-md {
+        height: 95% !important;
+        width: 90% !important;
+    }
+}

@@ -1,0 +1,33 @@
+$primary: rgba(#007bff, 0.5);
+$primary-dull: rgba($primary, 0.5);
+$secondary: rgba(#6c757d, 0.5);
+$secondary-dull: rgba($secondary, 0.5);
+$success: rgba(#28a745, 0.5);
+$success-dull: rgba(#28a745, 0.5);
+$my-yellow: rgba(#ffc107, 0.5);
+$my-yellow-dull: rgba($my-yellow, 0.5);
+$earthy: rgba(#763703, 0.5);
+$earthy-dull: rgba(#763703, 0.5);
+$background: rgba(#8888880e, 0.5);
+$wtf: rgba(red,1);
+$breakpoints: (
+    "xs": 0,
+    "sm": 575.9px,
+    "md": 767.9px,
+    "lg": 991.9px,
+    "xl": 1199.9px,
+    "xxl": 1399.9px
+);
+
+$theme-colors: (
+    "primary": $primary,
+    "primary-dull": $primary-dull,
+    "secondary": $secondary,
+    "secondary-dull": $secondary-dull,
+    "success": $success,
+    "success-dull": $success-dull,
+    "wtf": $wtf,
+    "background": $background,
+) !default;
+
+@import '../node_modules/bootstrap/scss/variables';

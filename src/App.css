@@ -1,0 +1,18 @@
+#root {
+  height: 100vh;
+}
+
+:root {
+  --primary: #282c34;
+  --secondary: #61dafb;
+  --tertiary: #646cff;
+  --quaternary: #888;
+  --quinary: #8888880e;
+  --senary: #fff;
+  --background-dark: #8888880e;
+}
+
+body {
+  /* background-color: #8888880e; */
+  background-color: var(--background-dark);
+}
