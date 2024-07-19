@@ -6,10 +6,11 @@ $success: rgba(#28a745, 0.5);
 $success-dull: rgba(#28a745, 0.5);
 $my-yellow: rgba(#ffc107, 0.5);
 $my-yellow-dull: rgba($my-yellow, 0.5);
+$my-orange: rgba(#fd7e14, 0.5);
+$my-orange-dull: rgba($my-orange, 0.5);
 $earthy: rgba(#763703, 0.5);
 $earthy-dull: rgba(#763703, 0.5);
 $background: rgba(#8888880e, 0.5);
-$wtf: rgba(red,1);
 $breakpoints: (
     "xs": 0,
     "sm": 575.9px,
@@ -26,7 +27,6 @@ $theme-colors: (
     "secondary-dull": $secondary-dull,
     "success": $success,
     "success-dull": $success-dull,
-    "wtf": $wtf,
     "background": $background,
 ) !default;
 

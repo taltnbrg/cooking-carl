@@ -4,7 +4,6 @@
     background: linear-gradient(
         315deg, 
         rgba($primary, 0.5) -30%, 
-        // rgba($my-yellow-dull, 0.4) 35%, 
         rgba($background, 0.5) 25%, 
         rgba($secondary-dull, 0.5) 55%, 
         rgba($secondary, 0.5) 90%
@@ -15,8 +14,21 @@
     background-attachment: fixed;
 }
 
+@mixin wave-background-sunny() {
+    background: linear-gradient(
+        180deg, 
+        rgba($primary, 0.5) -30%, 
+        rgba($my-yellow-dull, 0.4) 35%, 
+        rgba($my-orange-dull, 0.5) 55%, 
+        rgba($secondary, 0.5) 90%
+    );
+    animation: gradient 20s forwards infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
 body {
-    @include wave-background();
+    @include wave-background-sunny();
 }
 
 @keyframes gradient {
