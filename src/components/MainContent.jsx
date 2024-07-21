@@ -20,27 +20,29 @@ const MainContent = ({
     about: 2,
   };
   return (
-    <Container className="p-3 mt-3 contentspace">
-      <div className="">
-        <Carousel indicators={false} interval={null} controls={false} activeIndex={indices[content]}>
-          <Carousel.Item>
-            <Home lang={lang} handleButton={handleButton} />
-          </Carousel.Item>
-          <Carousel.Item>
-            <Assistant
-              lang={lang}
-              ingredients={ingredients}
-              handleIngredientDelete={handleIngredientDelete}
-              handleIngredientsInputKeyUp={handleIngredientsInputKeyUp}
-              handleIngredientsInputBlur={handleIngredientsInputBlur}
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <About lang={lang} />
-          </Carousel.Item>
-        </Carousel>
-      </div>
-    </Container>
+    <Carousel indicators={false} interval={null} controls={false} activeIndex={indices[content]}>
+      <Carousel.Item>
+        <Container className="p-3 mt-3 contentspace">
+          <Home lang={lang} handleButton={handleButton} />
+        </Container>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Container className="p-3 mt-3 contentspace">
+          <Assistant
+            lang={lang}
+            ingredients={ingredients}
+            handleIngredientDelete={handleIngredientDelete}
+            handleIngredientsInputKeyUp={handleIngredientsInputKeyUp}
+            handleIngredientsInputBlur={handleIngredientsInputBlur}
+          />
+        </Container>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Container className="p-3 mt-3 contentspace">
+          <About lang={lang} />
+        </Container>
+      </Carousel.Item>
+    </Carousel>
   );
 };
 MainContent.propTypes = {
