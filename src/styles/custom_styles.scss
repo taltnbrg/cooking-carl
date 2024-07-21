@@ -5,10 +5,8 @@
 @import './variables.scss';
 @import './wave_styles.scss';
 
-
-#root {
-    height: 100vh;
-    animation: spin 10s linear infinite;
+* {
+    scrollbar-width: none;
 }
 
 .logo {
@@ -54,7 +52,6 @@ body {
 .read-the-docs {
     color: #888;
 }
-
 
 .w-fit-content {
     width: fit-content;

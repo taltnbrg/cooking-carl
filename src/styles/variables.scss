@@ -30,4 +30,7 @@ $theme-colors: (
     "background": $background,
 ) !default;
 
+$carousel-transition-duration:       0.4s !default;
+$carousel-transition:                transform $carousel-transition-duration ease-in-out 0.1s !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
 @import '../node_modules/bootstrap/scss/variables';

@@ -19,7 +19,7 @@ const AssistantIntroduction = ({ lang }) => {
   return (
     <>
       <h3>{text.chat_instructions_intro[selectedLang]}</h3>
-      <div className="cursor-pointer p-0 m-0 ">
+      <div className="p-0 m-0 ">
         <Button
           size="sm"
           variant="link"

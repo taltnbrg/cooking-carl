@@ -83,6 +83,10 @@ const text = {
         "de": "Rezepte erhalten",
         "en": "Get suggestions 🍲"
     },
+    "chat_get_recipes_tooltip": {
+        "de": "Fügen Sie mindestens 3 Zutaten hinzu",
+        "en": "Add at least 3 ingredients"
+    },
 }
 
 export default text;

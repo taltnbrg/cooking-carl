@@ -7,7 +7,7 @@ const Home = ({ lang, handleButton }) => {
     <>
       <h1>{text.home_intro_heading[selectedLang]}</h1>
       <p className="ps-0 lead">{text.home_intro_text[selectedLang]}</p>
-      <a href="#chat" onClick={handleButton} className="btn btn-outline btn-primary">
+      <a href="#chat" onClick={handleButton} className="btn btn-success">
         {text.home_intro_button[selectedLang]}
       </a>
     </>
