@@ -17,7 +17,7 @@ const AssistantIntroduction = ({ lang }) => {
   const collapseInstructionsText = openInstructions ? 'chat_instructions_hide' : 'chat_instructions_show';
   const textToShow = text[collapseInstructionsText][selectedLang];
   return (
-    <>
+    <div className="mb-1">
       <h3>{text.chat_instructions_intro[selectedLang]}</h3>
       <div className="p-0 m-0 ">
         <Button
@@ -25,25 +25,25 @@ const AssistantIntroduction = ({ lang }) => {
           variant="link"
           as="a"
           onClick={() => setOpenInstructions(!openInstructions)}
-          className="p-0 m-0 fs-6 text-muted text-decoration-none"
+          className="p-0 m-0 text-muted text-decoration-none"
         >
           {textToShow}
         </Button>
       </div>
       <Collapse in={openInstructions}>
-        <Container className="p-0 m-0 pt-2 mt-2">
+        <Container className="p-0 m-0">
           <ListGroup as="ol" numbered>
             {steps
               .filter((step) => step != '')
               .map((step, index) => (
-                <ListGroup.Item variant="light" key={index} as="li">
+                <ListGroup.Item className="glass-background text-black-75 small" variant="light" key={index} as="li">
                   {step}
                 </ListGroup.Item>
               ))}
           </ListGroup>
         </Container>
       </Collapse>
-    </>
+    </div>
   );
 };
 

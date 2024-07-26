@@ -20,7 +20,7 @@ const IngredientDisplay = ({ ingredients, handleDelete }) => {
         {ingredients
           .filter((ingredient) => ingredient != '')
           .map((ingredient, index) => (
-            <ListGroup.Item variant="dark" key={index} as="li">
+            <ListGroup.Item className="glass-background" variant="dark" key={index} as="li">
               <span className="text-black">
                 {ingredient}
                 <CloseButton className="float-end" onClick={handleDelete} data-value={ingredient} key={index} />

@@ -63,24 +63,20 @@ body {
     border: var(--bs-border-width) var(--bs-border-color-translucent);
 }
 
-.glass {
+.glass-background {
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    // border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    // border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .cccenter-h-100-md {
     height: 100% !important;
     display: grid;
     place-content: center;
-}
-
-.z-dropdown-menu {
-    z-index: 2;
 }
 
 nav.z-dropdown-menu {
