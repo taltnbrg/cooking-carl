@@ -18,6 +18,7 @@ function App() {
       handleIngredientsInsert(value);
       e.target.value = '';
     }
+    return;
   };
 
   const handleIngredientsInputBlur = (e) => {

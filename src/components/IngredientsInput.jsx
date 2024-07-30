@@ -9,13 +9,16 @@ import PropTypes from 'prop-types';
 
 const IngredientsInput = ({ ingredients, handleIngredientDelete, handleKeyUp, handleBlur, lang }) => {
   const selectedLang = lang || 'en';
+  const minIngredientsCount = 4;
+
   const renderTooltip = ({ props }) => {
     return (
-      <Tooltip hidden={ingredients.length > 3} {...props}>
+      <Tooltip hidden={ingredients.length >= minIngredientsCount} {...props}>
         {text.chat_get_recipes_tooltip[selectedLang]}
       </Tooltip>
     );
   };
+
   return (
     <div>
       <InputGroup className="pt-1" onSubmit={(e) => e.preventDefault()} onKeyUp={handleKeyUp} onBlur={handleBlur}>
@@ -40,7 +43,12 @@ const IngredientsInput = ({ ingredients, handleIngredientDelete, handleKeyUp, ha
       <div className="d-grid gap-2">
         <OverlayTrigger placement="bottom" overlay={renderTooltip(ingredients)}>
           <span className="d-grid">
-            <Button disabled={ingredients.length < 3} className="rounded" variant="success" type="submit">
+            <Button
+              disabled={ingredients.length < minIngredientsCount}
+              className="rounded"
+              variant="success"
+              type="submit"
+            >
               {text.chat_get_recipes[selectedLang]}
             </Button>
           </span>
